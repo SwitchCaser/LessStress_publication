@@ -1,6 +1,8 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
 import android.content.Intent;
@@ -20,7 +22,7 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainScreen extends AppCompatActivity {
-    ImageButton karambola,game,calendar, todo;
+    ImageButton karambola,game,calendar, todo,lamp1;
     AnimationDrawable animation;
     ImageButton sos;
 
@@ -33,6 +35,13 @@ public class MainScreen extends AppCompatActivity {
         game = findViewById(R.id.game_icon);
         game = findViewById(R.id.tools_icon);
         calendar = findViewById(R.id.calendar_icon);
+        lamp1 = findViewById(R.id.lamp_main);
+        lamp1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent lampM = new Intent(MainScreen.this, Thanks.class);
+            }
+        });
         game.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

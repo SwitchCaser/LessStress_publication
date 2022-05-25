@@ -72,7 +72,6 @@ public class Start3 extends AppCompatActivity {
                                     MainActivity2.name=full_name;
                                     intent5.putExtra("var", 10);
                                     MainActivity2.var = 10;
-                                    MainActivity2.saveEverything();
                                     startActivity(intent5);
                                 }
                             });
@@ -110,7 +109,6 @@ public class Start3 extends AppCompatActivity {
                                     MainActivity2.name = name;
                                     intent5.putExtra("var",11);
                                     MainActivity2.var = 11;
-                                    MainActivity2.saveEverything();
                                     if (he.isChecked()) {
                                         intent5.putExtra("radiochosen",1);
                                     }
@@ -147,7 +145,6 @@ public class Start3 extends AppCompatActivity {
                                 public void onClick(View v) {
                                     intent5.putExtra("var",12);
                                     MainActivity2.var = 12;
-                                    MainActivity2.saveEverything();
                                     startActivity(intent5);
                                 }
                             });

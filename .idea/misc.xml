@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/HP/Desktop/M2/app/src/main/res/layout/activity_start2.xml" value="0.4" />
+        <entry key="..\:/Users/HP/Desktop/M2/app/src/main/res/layout/activity_main_screen.xml" value="0.136" />
+        <entry key="..\:/Users/HP/Desktop/M2/app/src/main/res/layout/activity_start2.xml" value="0.136" />
+        <entry key="..\:/Users/HP/Desktop/M2/app/src/main/res/layout/activity_start3.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/HP/Desktop/M2/app/src/main/res/layout/activity_start4.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/HP/Desktop/M2/app/src/main/res/layout/activity_thanks.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>

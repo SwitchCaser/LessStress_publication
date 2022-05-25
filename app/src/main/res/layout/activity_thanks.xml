@@ -7,7 +7,7 @@
     android:backgroundTintMode="src_atop"
     android:background="#f0fad7"
     android:layout_height="match_parent"
->
+    >
 
 
 
@@ -37,7 +37,7 @@
             android:fontFamily="@font/fontone"
             android:foregroundGravity="center"
             android:gravity="center"
-            android:text="Это приложение полностью бесплатное. Тут нет премиальной версии или дополнительных возможностей, которые можно приобрести. Купить можно только красивые предметики в игре, которые никак не влияют на функционал.\nМы хотели, чтобы это приложение было добрым и уютным без ограничений. Поэтому, если вы захотите поддержать нас, то всегда это можете сделать, украсив комнату Карамболы, или по кнопке &quot;Поддержать авторов&quot;, отмеченной звездочкой&#9734;"
+            android:text="@string/app_name"
             android:textColor="#6a9c53"
             android:textSize="21dp"
             app:layout_constraintBottom_toBottomOf="parent"
