@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Thanks"
+    android:background="@color/Background">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.382"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/textTip"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:fontFamily="@font/fontone"
+            android:gravity="center"
+            android:text="Cоветы\n1. Накануне вечером сделайте уборку в комнате, чтобы не проснуться в беспорядке, провоцирующем стресс.\n2. Поставьте рядом с кроватью стакан воды. Когда прозвонит будильник, сделайте глубокий вдох, потянитесь, сядьте и выпейте всю воду. Подождите какое-то время, прислушайтесь к своему организму. Это помогает снизить тревожность.\n3. Прогуляйтесь. Или просто быстро походите 5-10 минут.\n4. Сожмите правую руку в кулак. Зафиксируйте свое внимание на том, как напряглись мышцы. Затем разжимайте медленно кулак и наблюдайте как мышцы начинают расслаблять. Тоже самое сделайте другой рукой. Потом двумя руками вместе.\n5. Выпейте стакан воды 10 маленькими глотками (Обязательно считайте).\n6. Используете запахи. Очистите мандарин, разрежьте яблоко или просто возьмите ароматное масло и духи. Вдыхайте аромат закрыв глаза."
+            android:textColor="@color/Green"
+            android:textSize="25dp" />
+
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonbreath"
+        android:fontFamily="@font/fontone"
+        android:text="Секретная кнопка"
+        android:textColor="@color/Darkgreen"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

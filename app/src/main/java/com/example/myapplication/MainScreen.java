@@ -21,6 +21,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.example.myapplication.screens.main.MainActivity4;
+
 public class MainScreen extends AppCompatActivity {
     ImageButton karambola,game,calendar, todo,lamp1;
     AnimationDrawable animation;
@@ -33,13 +35,14 @@ public class MainScreen extends AppCompatActivity {
         sos = findViewById(R.id.next34_button);
         todo =findViewById(R.id.tools_icon);
         game = findViewById(R.id.game_icon);
-        game = findViewById(R.id.tools_icon);
+        game = findViewById(R.id.game_icon);
         calendar = findViewById(R.id.calendar_icon);
         lamp1 = findViewById(R.id.lamp_main);
         lamp1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent lampM = new Intent(MainScreen.this, Thanks.class);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
         game.setOnClickListener(new View.OnClickListener() {
@@ -61,8 +64,8 @@ public class MainScreen extends AppCompatActivity {
         todo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentCalendar = new Intent(MainScreen.this, App.class);
-                startActivity(intentCalendar);
+                Intent intentTodo = new Intent(MainScreen.this, MainActivity4.class);
+                startActivity(intentTodo);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });

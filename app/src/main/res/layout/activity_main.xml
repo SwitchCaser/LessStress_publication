@@ -19,12 +19,12 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="61dp"
-        android:gravity="center"
         android:background="@drawable/buttonbreath"
-        android:text="Начать"
         android:fontFamily="@font/fontone"
-        android:textSize="18dp"
-        android:textColor="@color/Darkgreen"/>
+        android:gravity="center"
+        android:text="Начать"
+        android:textColor="@color/Darkgreen"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/tip"

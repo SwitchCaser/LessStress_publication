@@ -187,6 +187,27 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener,
 		}
 		CALDROID_FRAGMENT.refreshView();
 
+		ImageButton lamp = findViewById(R.id.lamp_main);
+		lamp.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent home3 = new Intent(Calendar.this, Thanks.class);
+				startActivity(home3);
+				home3.getIntExtra("activity",1 );
+				overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+			}
+		});
+
+		ImageButton back = findViewById(R.id.back);
+		back.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Intent home = new Intent(Calendar.this, MainScreen.class);
+				startActivity(home);
+				overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+			}
+		});
+
 		final CaldroidListener listener = new CaldroidListener() {
 			@Override
 			public void onSelectDate(Date date, View view) {

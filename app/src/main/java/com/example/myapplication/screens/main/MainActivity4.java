@@ -1,7 +1,9 @@
 package com.example.myapplication.screens.main;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,6 +15,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.MainScreen;
 import com.example.myapplication.screens.details.Adapter;
 import com.example.myapplication.screens.details.NoteDetailsActivity;
 import com.example.myapplication.R;
@@ -37,6 +40,17 @@ public class MainActivity4 extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ImageButton home2 = findViewById(R.id.back_home);
+        home2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent h = new Intent(MainActivity4.this, MainScreen.class);
+                startActivity(h);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            }
+        });
 
         recyclerView = findViewById(R.id.list);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);

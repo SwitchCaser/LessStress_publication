@@ -55,6 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
     </RadioGroup>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -65,5 +66,15 @@
         android:layout_margin="16dp"
         android:backgroundTint="#6a9c53"
         app:srcCompat="@drawable/plus3" />
+    <ImageButton
+        android:id="@+id/back_home"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleX="-1"
+        android:backgroundTint="@color/caldroid_transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow3"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_margin="16dp"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
