@@ -192,8 +192,9 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener,
 			@Override
 			public void onClick(View v) {
 				Intent home3 = new Intent(Calendar.this, Thanks.class);
+
+				home3.putExtra("activity",1);
 				startActivity(home3);
-				home3.getIntExtra("activity",1 );
 				overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 			}
 		});

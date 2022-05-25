@@ -14,7 +14,7 @@ public class Thanks extends AppCompatActivity {
         TextView tip = findViewById(R.id.textTip);
         int activity =  getIntent().getIntExtra("activity",0);
         if (activity==1){
-            tip.setText("1.Чтобы включить фильтр по меткам, зажмите нужную метку\n2.Чтобы добавить заметку, удерживайте ячейку даты");
+            tip.setText("1. Чтобы включить фильтр по меткам, зажмите нужную метку\n2. Чтобы добавить заметку, удерживайте ячейку даты");
 
         }
     }
