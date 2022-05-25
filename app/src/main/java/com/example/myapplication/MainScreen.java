@@ -42,6 +42,7 @@ public class MainScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent lampM = new Intent(MainScreen.this, Thanks.class);
+                startActivity(lampM);
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
