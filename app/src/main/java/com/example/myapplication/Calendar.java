@@ -215,7 +215,6 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener,
 				if (markedDates.containsKey(selectedDate)) {
 					ArrayList<Drawable> layers = layerDrawableToDrawables(Objects.requireNonNull(markedDates.get(selectedDate)));
 					layers.removeIf(x -> compareDrawablesByBitmap(x, frames.get(4)));
-//					layers.removeIf(x -> Objects.equals(x, frames.get(4)));
 					markedDates.remove(selectedDate);
 					if (layers.size() < 1)
 						CALDROID_FRAGMENT.clearBackgroundDrawableForDate(selectedDate);
@@ -228,9 +227,6 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener,
 				if (markedDates.containsKey(date)) {
 					ArrayList<Drawable> layers = new ArrayList<>();
 					layers.add(frames.get(4));
-//					for (Drawable layer : layers)
-//						if (compareDrawablesByBitmap(layer, frames.get(4)))
-//							layer.setVisible(true, true);
 					layers.forEach(x -> x.setVisible(true, true));
 					layers.addAll(layerDrawableToDrawables(Objects.requireNonNull(markedDates.get(date))));
 					markedDates.remove(date);
@@ -276,7 +272,6 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener,
 					if (!pillFlag) selectedPillButton = null;
 					if (!moodFlag) selectedMoodButton = null;
 				}
-				//CALDROID_FRAGMENT.setBackgroundDrawableForDate(currentFrame, selectedDate);
 				CALDROID_FRAGMENT.refreshView();
 				saveEverything();
 			}
@@ -289,18 +284,34 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener,
 				if (markedDates.containsKey(selectedDate))
 					CALDROID_FRAGMENT.setBackgroundDrawableForDate(markedDates.get(selectedDate), selectedDate);
 				CALDROID_FRAGMENT.refreshView();
-//				CALDROID_FRAGMENT.refreshView();
 			}
 		};
 		CALDROID_FRAGMENT.setCaldroidListener(listener);
 	}
 	public void addNewNotePopup(Date date, View view) {
+		String title = "";
+		if (MainActivity2.var == 10) {
+			title = MainActivity2.name + "добавьте заметку";
+		}
+		else if (MainActivity2.var == 11) {
+			title = MainActivity2.name + "добавь заметку";
+		}
+		else if (MainActivity2.var == 12) {
+			title = "Солнце, добавь заметку";
+		}
+		String title2 = "";
+		if (MainActivity2.var == 10) {
+			title2 = MainActivity2.name + "напишите заметку";
+		}
+		else if (MainActivity2.var == 11 || MainActivity2.var == 12) {
+			title2 = "Напиши текст заметки";
+		}
 		final EditText taskEditText = new EditText(this);
 		AlertDialog dialog = new AlertDialog.Builder(this)
-				.setTitle("Add a new note")
-				.setMessage("What do you want to add?")
+				.setTitle(title)
+				.setMessage(title2)
 				.setView(taskEditText)
-				.setPositiveButton("Add", (dialog1, which) -> {
+				.setPositiveButton("Добавить", (dialog1, which) -> {
 					String note = String.valueOf(taskEditText.getText());
 					if (note.isEmpty()) return;
 					notes.put(date, note);
@@ -315,15 +326,15 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener,
 					this.updateHashMapOfNotes();
 					this.updateHashMapOfDates();
 				})
-				.setNegativeButton("Cancel", null)
+				.setNegativeButton("Отменить", null)
 				.create();
 		dialog.show();
 	}
 	public void removeNotePopup(Date date, View view) {
 		AlertDialog dialog = new AlertDialog.Builder(this)
-				.setTitle("Note")
+				.setTitle("Заметка")
 				.setMessage(notes.get(date))
-				.setPositiveButton("Remove", (dialog1, which) -> {
+				.setPositiveButton("Удалить", (dialog1, which) -> {
 					notes.remove(date);
 					if (markedDates.containsKey(date))
 					{
@@ -347,7 +358,7 @@ public class Calendar extends AppCompatActivity implements View.OnClickListener,
 					this.updateHashMapOfNotes();
 					this.updateHashMapOfDates();
 				})
-				.setNegativeButton("Cancel", null)
+				.setNegativeButton("Отменить", null)
 				.create();
 		dialog.show();
 	}
