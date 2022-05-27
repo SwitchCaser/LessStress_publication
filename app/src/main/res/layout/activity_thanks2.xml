@@ -20,7 +20,8 @@
  Николаева Кира\n rPersival\n Гречка\n
  Графический дизайнер: Tomatis\n
  Аниматор: Екатерина Черепанова\n
- Психологи: Ваня Франк, Яна Дубровская\n"
+ Психологи: Ваня Франк, Яна Дубровская\n
+ Озвучка: Ислам Ганджаев"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/buttonSecret"
         app:layout_constraintEnd_toEndOf="parent"
