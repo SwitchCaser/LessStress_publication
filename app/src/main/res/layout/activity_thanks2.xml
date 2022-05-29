@@ -52,12 +52,17 @@
             android:textSize="25dp" />
 
 
+
+
     </ScrollView>
+
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonSecret"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/buttonbreath"
         android:fontFamily="@font/fontone"
         android:text="Секретная кнопка"
@@ -65,8 +70,7 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="10dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 

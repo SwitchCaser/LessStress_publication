@@ -1,9 +1,10 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -26,10 +27,11 @@ import com.example.myapplication.screens.main.MainActivity4;
 public class MainScreen extends AppCompatActivity {
     ImageButton karambola,game,calendar, todo,lamp1;
     AnimationDrawable animation;
-    ImageButton sos;
+    ImageButton sos, sound;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final boolean[] isTapped = {false};
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         sos = findViewById(R.id.next34_button);
@@ -37,6 +39,27 @@ public class MainScreen extends AppCompatActivity {
         game = findViewById(R.id.game_icon);
         game = findViewById(R.id.game_icon);
         calendar = findViewById(R.id.calendar_icon);
+        sound = findViewById(R.id.relax);
+
+
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment fragment = new SoundFragment();
+                FragmentTransaction soundFragment1 = getSupportFragmentManager().beginTransaction();
+                soundFragment1.replace(R.id.fragmentContainerView, fragment);
+                if (isTapped[0]==false) {
+
+                    soundFragment1.addToBackStack(null);
+                    soundFragment1.commit();
+                    isTapped[0]=true;
+                }
+                else {
+                    getSupportFragmentManager().popBackStack();
+                    isTapped[0]=false;
+                }
+            }
+        });
         lamp1 = findViewById(R.id.lamp_main);
         lamp1.setOnClickListener(new View.OnClickListener() {
             @Override
