@@ -8,13 +8,126 @@
     tools:context=".SoundFragment">
 
     <TextView
+        android:id="@+id/textView13"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Звуки"
         android:fontFamily="@font/fontone"
-        android:textColor="@color/Green"
         android:gravity="center"
-        android:textSize="35dp"/>
+        android:text="Звуки"
+        android:textColor="@color/Green"
+        android:textSize="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:fontFamily="@font/fontone"
+        android:text="Запись при тревоги. Тоже с любовью, как будто мы рядом"
+        android:textColor="@color/Green"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.298" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:fontFamily="@font/fontone"
+        android:text="Запись для медитации. (Она записывалась нами с любовью, но с плохим микрофоном)"
+        android:textColor="@color/Green"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.071" />
+
+    <ImageButton
+        android:id="@+id/play1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/caldroid_transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.171" />
+
+    <ImageButton
+        android:id="@+id/pause1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/caldroid_transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.171" />
+
+    <SeekBar
+        android:id="@+id/sound1"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19"/>
+
+    <ImageButton
+        android:id="@+id/play2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/caldroid_transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.445" />
+
+    <ImageButton
+        android:id="@+id/pause2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/caldroid_transparent"
+        android:scaleType="fitXY"
+        android:src="@drawable/pause"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.445" />
+
+    <SeekBar
+        android:id="@+id/sound2"
+        android:layout_width="300dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.448" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
