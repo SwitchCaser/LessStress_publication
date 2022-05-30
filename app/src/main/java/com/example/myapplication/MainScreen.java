@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -20,14 +21,17 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.SeekBar;
 import android.widget.Toast;
 
 import com.example.myapplication.screens.main.MainActivity4;
 
 public class MainScreen extends AppCompatActivity {
     ImageButton karambola,game,calendar, todo,lamp1;
+
     AnimationDrawable animation;
     ImageButton sos, sound;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +41,10 @@ public class MainScreen extends AppCompatActivity {
         sos = findViewById(R.id.next34_button);
         todo =findViewById(R.id.tools_icon);
         game = findViewById(R.id.game_icon);
-        game = findViewById(R.id.game_icon);
         calendar = findViewById(R.id.calendar_icon);
         sound = findViewById(R.id.relax);
+
+
 
 
         sound.setOnClickListener(new View.OnClickListener() {
@@ -149,6 +154,8 @@ public class MainScreen extends AppCompatActivity {
                 startActivity(sosIntent);
             }
         });
+
+
 
     }
 }

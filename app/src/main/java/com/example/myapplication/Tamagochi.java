@@ -24,6 +24,7 @@ import java.util.stream.IntStream;
 public class Tamagochi extends AppCompatActivity {
     ImageView dish, window,karIm,bed,dark;
     ImageButton kar,sleep_button,home, lamp;
+    ImageButton store111;
     AnimationDrawable eatAnim, sleepAnim,sleepStaticAnim, happyAnim;
     static int[] time = {100,100,100};
     boolean isTappedSleep = false;
@@ -36,6 +37,16 @@ public class Tamagochi extends AppCompatActivity {
         setContentView(R.layout.activity_tamagochi);
 
         lamp = findViewById(R.id.lamp_tm);
+
+        store111 = findViewById(R.id.store_button111);
+        store111.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent store = new Intent(Tamagochi.this,Store.class);
+                startActivity(store);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            }
+        });
         lamp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
