@@ -15,7 +15,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 import com.spicysauce.lessstress.model.Note;
 import com.spicysauce.lessstress.model.Tag;
 import com.spicysauce.lessstress.App;

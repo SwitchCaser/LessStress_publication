@@ -13,7 +13,7 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 
 public class Start3 extends AppCompatActivity {
     Button b3, b4;

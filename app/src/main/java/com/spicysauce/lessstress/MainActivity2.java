@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 
 import java.util.Random;
 

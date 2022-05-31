@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 
 public class Startscreen extends AppCompatActivity {
 

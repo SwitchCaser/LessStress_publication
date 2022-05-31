@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 
 public class Store extends AppCompatActivity {
 

@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 import com.tomer.fadingtextview.FadingTextView;
 
 import java.util.Timer;

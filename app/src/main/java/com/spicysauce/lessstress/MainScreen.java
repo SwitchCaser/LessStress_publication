@@ -12,7 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 import com.spicysauce.lessstress.screens.main.MainActivity4;
 
 public class MainScreen extends AppCompatActivity {

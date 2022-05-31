@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.spicysauce.lessstress.MainScreen;
 import com.spicysauce.lessstress.screens.details.Adapter;
 import com.spicysauce.lessstress.screens.details.NoteDetailsActivity;
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 import com.spicysauce.lessstress.model.Note;
 import com.spicysauce.lessstress.model.Tag;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;

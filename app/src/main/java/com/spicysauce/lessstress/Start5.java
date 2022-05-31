@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 
 public class Start5 extends AppCompatActivity {
 

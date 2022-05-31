@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 
 
 public class SoundFragment extends Fragment {

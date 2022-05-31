@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 
 import java.util.TimeZone;
 import java.util.stream.IntStream;

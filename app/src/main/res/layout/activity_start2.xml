@@ -20,6 +20,7 @@
         android:orientation="vertical"
         android:layout_weight="1">
 
+
         <ImageView
 
             android:id="@+id/calendar"
@@ -29,8 +30,13 @@
             android:paddingTop="10sp"
             android:scaleType="fitStart"
             android:src="@drawable/cal_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.034"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
             tools:ignore="MissingConstraints" />
-
 
         <TextView
             android:id="@+id/textView2"
@@ -48,7 +54,11 @@
             android:textColor="#6a9c53"
             android:textSize="21dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -69,10 +79,15 @@
             android:layout_width="180sp"
             android:layout_height="match_parent"
             android:paddingLeft="-20sp"
-            android:paddingRight="-10sp"
             android:paddingTop="10sp"
+            android:paddingRight="-10sp"
             android:scaleType="fitStart"
             android:src="@drawable/game_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -90,7 +105,8 @@
             android:textColor="#6a9c53"
             android:textSize="21dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -108,12 +124,18 @@
         <ImageView
 
             android:id="@+id/tools"
-            android:layout_width="180sp"
-            android:layout_height="match_parent"
-            android:paddingLeft="-20sp"
+            android:layout_width="140dp"
+            android:layout_height="110dp"
+            android:layout_marginEnd="8dp"
             android:paddingTop="10sp"
-            android:scaleType="fitCenter"
+            android:paddingRight="40dp"
+            android:scaleType="fitXY"
             android:src="@drawable/todo_icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView3"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -132,7 +154,11 @@
             android:textColor="#6a9c53"
             android:textSize="21dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -156,6 +182,11 @@
             android:paddingTop="10sp"
             android:scaleType="fitStart"
             android:src="@drawable/sos_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             tools:ignore="MissingConstraints" />
 
         <TextView
@@ -174,7 +205,10 @@
             android:textColor="#6a9c53"
             android:textSize="21dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout

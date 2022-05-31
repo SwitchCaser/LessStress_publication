@@ -14,7 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.SortedList;
 
-import com.example.myapplication.R;
+import com.spicysauce.lessstress.R;
 import com.spicysauce.lessstress.model.Note;
 import com.spicysauce.lessstress.model.Tag;
 import com.spicysauce.lessstress.App;
