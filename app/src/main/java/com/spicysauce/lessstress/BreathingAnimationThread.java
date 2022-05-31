@@ -1,7 +1,6 @@
-package com.example.myapplication;
+package com.spicysauce.lessstress;
 
 import android.app.Activity;
-import android.content.Context;
 import android.widget.ImageView;
 
 class BreathingAnimationThread extends Thread{

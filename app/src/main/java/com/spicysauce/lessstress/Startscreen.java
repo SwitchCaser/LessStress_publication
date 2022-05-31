@@ -1,12 +1,12 @@
-package com.example.myapplication;
+package com.spicysauce.lessstress;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.myapplication.R;
 
 public class Startscreen extends AppCompatActivity {
 

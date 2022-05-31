@@ -1,4 +1,4 @@
-package com.example.myapplication.screens.details;
+package com.spicysauce.lessstress.screens.details;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,9 +16,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import com.example.myapplication.R;
-import com.example.myapplication.model.Note;
-import com.example.myapplication.model.Tag;
-import com.example.myapplication.App;
+import com.spicysauce.lessstress.model.Note;
+import com.spicysauce.lessstress.model.Tag;
+import com.spicysauce.lessstress.App;
 
 public class NoteDetailsActivity extends AppCompatActivity {
 

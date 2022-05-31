@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="#f0fad7"
     android:layout_height="match_parent"
-    tools:context=".Start2">
+    tools:context="com.spicysauce.lessstress.Start2">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout

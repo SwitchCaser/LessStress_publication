@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.spicysauce.lessstress;
 
 
 import android.annotation.SuppressLint;
@@ -23,6 +23,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.myapplication.R;
 import com.google.gson.Gson;
 import com.roomorama.caldroid.CaldroidFragment;
 import com.roomorama.caldroid.CaldroidListener;

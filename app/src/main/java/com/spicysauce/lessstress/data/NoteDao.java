@@ -1,4 +1,4 @@
-package com.example.myapplication.data;
+package com.spicysauce.lessstress.data;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -8,7 +8,7 @@ import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.myapplication.model.Note;
+import com.spicysauce.lessstress.model.Note;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.spicysauce.lessstress;
 
 import android.content.ClipData;
 import android.content.Context;
@@ -17,7 +17,8 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.Date;
+import com.example.myapplication.R;
+
 import java.util.TimeZone;
 import java.util.stream.IntStream;
 
@@ -94,7 +95,7 @@ public class Tamagochi extends AppCompatActivity {
         }
 
 
-        new CountDownTimer(200000, 2000) {
+        new CountDownTimer(2000000, 2000) {
 
             public void onTick(long millisUntilFinished) {
 
@@ -120,7 +121,7 @@ public class Tamagochi extends AppCompatActivity {
             }
 
         }.start();
-        new CountDownTimer(200000, 2500) {
+        new CountDownTimer(2000000, 2500) {
 
             public void onTick(long millisUntilFinished) {
                 time[0]=checkProgress(time[0]);
@@ -146,7 +147,7 @@ public class Tamagochi extends AppCompatActivity {
             }
 
         }.start();
-        healthT = new CountDownTimer(500000, 5000) {
+        healthT = new CountDownTimer(5000000, 5000) {
 
             public void onTick(long millisUntilFinished) {
                 time[2]=checkProgress(time[2]);

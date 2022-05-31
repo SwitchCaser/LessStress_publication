@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    package="com.spicysauce.lessstress">
+    <uses-permission android:name="com.android.vending.BILLING"/>
 
     <application
-        android:name=".App"
+        android:name="com.spicysauce.lessstress.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -11,33 +12,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".Store"
+            android:name="com.spicysauce.lessstress.Store"
             android:exported="false" />
         <activity
-            android:name=".Thanks"
-            android:exported="false"></activity>
+            android:name="com.spicysauce.lessstress.Thanks"
+            android:exported="false"/>
         <activity
-            android:name=".screens.main.MainActivity4"
+            android:name="com.spicysauce.lessstress.screens.main.MainActivity4"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-        <activity
-            android:name=".screens.details.NoteDetailsActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Calendar"
+            android:name="com.spicysauce.lessstress.screens.details.NoteDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.spicysauce.lessstress.Calendar"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Tamagochi"
+            android:name="com.spicysauce.lessstress.Tamagochi"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MainActivity2"
+            android:name="com.spicysauce.lessstress.MainActivity2"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MainScreen"
+            android:name="com.spicysauce.lessstress.MainScreen"
             android:exported="true"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -47,27 +48,27 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Start4"
+            android:name="com.spicysauce.lessstress.Start4"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Start5"
+            android:name="com.spicysauce.lessstress.Start5"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Start3"
+            android:name="com.spicysauce.lessstress.Start3"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Start2"
+            android:name="com.spicysauce.lessstress.Start2"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Startscreen"
+            android:name="com.spicysauce.lessstress.Startscreen"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".MainActivity"
+            android:name="com.spicysauce.lessstress.MainActivity"
             android:exported="false" />
     </application>
 

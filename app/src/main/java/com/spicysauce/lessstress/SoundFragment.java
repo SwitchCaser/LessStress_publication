@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.spicysauce.lessstress;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 
-import java.util.concurrent.TimeUnit;
+import com.example.myapplication.R;
 
 
 public class SoundFragment extends Fragment {

@@ -1,4 +1,4 @@
-package com.example.myapplication.model;
+package com.spicysauce.lessstress.model;
 
 public class Tag {
 

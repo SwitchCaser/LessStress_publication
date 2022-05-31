@@ -1,4 +1,4 @@
-package com.example.myapplication.screens.main;
+package com.spicysauce.lessstress.screens.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,12 +15,12 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.myapplication.MainScreen;
-import com.example.myapplication.screens.details.Adapter;
-import com.example.myapplication.screens.details.NoteDetailsActivity;
+import com.spicysauce.lessstress.MainScreen;
+import com.spicysauce.lessstress.screens.details.Adapter;
+import com.spicysauce.lessstress.screens.details.NoteDetailsActivity;
 import com.example.myapplication.R;
-import com.example.myapplication.model.Note;
-import com.example.myapplication.model.Tag;
+import com.spicysauce.lessstress.model.Note;
+import com.spicysauce.lessstress.model.Tag;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -74,7 +74,7 @@ public class MainActivity4 extends AppCompatActivity {
         findViewById(R.id.t1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                                applyTag(Tag.red);
+                applyTag(Tag.red);
             }
         });
         findViewById(R.id.t2).setOnClickListener(new View.OnClickListener() {
@@ -86,13 +86,13 @@ public class MainActivity4 extends AppCompatActivity {
         findViewById(R.id.t3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                                applyTag(Tag.green);
+                applyTag(Tag.green);
             }
         });
         findViewById(R.id.t_reset).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                                applyTag(0);
+                applyTag(0);
                 radioGroup.clearCheck();
             }
         });

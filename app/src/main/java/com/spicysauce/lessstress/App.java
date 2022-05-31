@@ -1,11 +1,11 @@
-package com.example.myapplication;
+package com.spicysauce.lessstress;
 
 import android.app.Application;
 
 import androidx.room.Room;
 
-import com.example.myapplication.data.AppDatabase;
-import com.example.myapplication.data.NoteDao;
+import com.spicysauce.lessstress.data.AppDatabase;
+import com.spicysauce.lessstress.data.NoteDao;
 
 public class App extends Application {
 

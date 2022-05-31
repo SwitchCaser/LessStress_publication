@@ -1,10 +1,10 @@
-package com.example.myapplication.screens.main;
+package com.spicysauce.lessstress.screens.main;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.myapplication.model.Note;
-import com.example.myapplication.App;
+import com.spicysauce.lessstress.model.Note;
+import com.spicysauce.lessstress.App;
 
 import java.util.List;
 

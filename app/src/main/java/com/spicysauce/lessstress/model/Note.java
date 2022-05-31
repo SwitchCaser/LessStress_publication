@@ -1,4 +1,4 @@
-package com.example.myapplication.model;
+package com.spicysauce.lessstress.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;

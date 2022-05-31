@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.spicysauce.lessstress;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,16 +6,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Start2 extends AppCompatActivity {
+import com.example.myapplication.R;
+
+public class Start4 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start2);
-        findViewById(R.id.next2_button).setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_start4);
+        findViewById(R.id.next22_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent swap2 = new Intent(Start2.this, Start3.class);
+                Intent swap2 = new Intent(Start4.this, Start3.class);
                 startActivity(swap2);
             }
         });

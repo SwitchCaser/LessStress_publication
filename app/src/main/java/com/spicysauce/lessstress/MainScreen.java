@@ -1,30 +1,19 @@
-package com.example.myapplication;
+package com.spicysauce.lessstress;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.app.FragmentManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.drawable.AnimationDrawable;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.SeekBar;
-import android.widget.Toast;
 
-import com.example.myapplication.screens.main.MainActivity4;
+import com.example.myapplication.R;
+import com.spicysauce.lessstress.screens.main.MainActivity4;
 
 public class MainScreen extends AppCompatActivity {
     ImageButton karambola,game,calendar, todo,lamp1;
