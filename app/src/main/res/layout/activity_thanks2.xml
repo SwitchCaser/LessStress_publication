@@ -21,7 +21,8 @@
  Графический дизайнер: Tomatis\n
  Аниматор: Екатерина Черепанова\n
  Психологи: Ваня Франк, Яна Дубровская\n
- Озвучка: Ислам Ганджаев"
+ Озвучка: Ислам Ганджаев\n
+ Медитации: Никита Поздняк"
         android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/buttonSecret"
         app:layout_constraintEnd_toEndOf="parent"
