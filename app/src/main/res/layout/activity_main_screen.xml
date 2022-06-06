@@ -81,19 +81,18 @@
             android:background="@drawable/happy"
             android:scaleType="fitCenter"
 
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-           />
+            app:layout_constraintTop_toTopOf="parent" />
 
-
-
+        <FrameLayout
+            android:id="@+id/fragmentContainerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <FrameLayout
-        android:id="@+id/fragmentContainerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -111,12 +110,13 @@
         <ImageButton
             android:id="@+id/next34_button"
             android:layout_width="230dp"
-            android:layout_marginRight="-50dp"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/sos_img" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

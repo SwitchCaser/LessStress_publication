@@ -38,22 +38,25 @@ public class Tamagochi extends AppCompatActivity {
         setContentView(R.layout.activity_tamagochi);
 
         lamp = findViewById(R.id.lamp_tm);
-
+        /*
         store111 = findViewById(R.id.store_button111);
         store111.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent store = new Intent(Tamagochi.this,Store.class);
                 startActivity(store);
+                finish();
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
+        */
         lamp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent homeTam = new Intent(Tamagochi.this, Thanks.class);
                 homeTam.putExtra("activity",2);
                 startActivity(homeTam);
+                finish();
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
             }
         });
@@ -74,6 +77,7 @@ public class Tamagochi extends AppCompatActivity {
                 saveEverything();
                 Intent intent7 = new Intent(Tamagochi.this, MainScreen.class);
                 startActivity(intent7);
+                finish();
                 overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
 
             }
