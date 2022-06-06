@@ -96,15 +96,17 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="200dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/group2"
         android:id="@+id/group5"
+        android:layout_width="200dp"
         android:layout_height="170dp"
         android:layout_alignParentStart="true"
-        android:orientation="vertical"
         android:layout_gravity="right"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/relax"
+        app:layout_constraintTop_toBottomOf="@id/group2">
 
 
         <ImageButton
@@ -127,15 +129,15 @@
         android:layout_height="70dp"
         android:backgroundTint="@color/caldroid_transparent"
         android:foregroundGravity="right"
+        android:onClick="onClick1"
         android:scaleType="fitXY"
         android:src="@drawable/sound"
-        android:onClick="onClick1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.376"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/lamp_main"
         app:layout_constraintTop_toBottomOf="@+id/group2"
-        app:layout_constraintVertical_bias="0.447"
+        app:layout_constraintVertical_bias="0.428"
         tools:ignore="OnClick" />
 
     <ImageButton
