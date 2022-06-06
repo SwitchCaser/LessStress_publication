@@ -26,6 +26,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        android:paddingLeft="10dp"
         android:fontFamily="@font/fontone"
         android:text="Запись при тревоги. Тоже с любовью, как будто мы рядом"
         android:textColor="@color/Green"
@@ -38,6 +39,7 @@
         app:layout_constraintVertical_bias="0.298" />
 
     <TextView
+        android:paddingLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:fontFamily="@font/fontone"
