@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context="com.spicysauce.lessstress.Thanks"
     android:background="@color/Background">
-
     <TextView
         android:id="@+id/textTip2"
         android:layout_width="match_parent"
@@ -29,6 +28,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
@@ -39,7 +40,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.382"
-        tools:ignore="MissingConstraints">
+        tools:ignore="MissingConstraints"
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/textTip"
@@ -50,7 +52,9 @@
             android:visibility="visible"
             android:text="Cоветы\n1. Накануне вечером сделайте уборку в комнате, чтобы не проснуться в беспорядке, провоцирующем стресс.\n2. Поставьте рядом с кроватью стакан воды. Когда прозвонит будильник, сделайте глубокий вдох, потянитесь, сядьте и выпейте всю воду. Подождите какое-то время, прислушайтесь к своему организму. Это помогает снизить тревожность.\n3. Прогуляйтесь. Или просто быстро походите 5-10 минут.\n4. Сожмите правую руку в кулак. Зафиксируйте свое внимание на том, как напряглись мышцы. Затем разжимайте медленно кулак и наблюдайте как мышцы начинают расслаблять. Тоже самое сделайте другой рукой. Потом двумя руками вместе.\n5. Выпейте стакан воды 10 маленькими глотками (Обязательно считайте).\n6. Используете запахи. Очистите мандарин, разрежьте яблоко или просто возьмите ароматное масло и духи. Вдыхайте аромат закрыв глаза.\n7. Самостоятельно придите к желанию медитировать. Начинайте с нескольких минут, постепенно увеличивая время. Никогда не заставляйте себя медитировать\n\n\n"
             android:textColor="@color/Green"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            />
+
 
 
 
@@ -58,6 +62,54 @@
     </ScrollView>
 
 
+    <TextView
+        android:id="@+id/textViewQ"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:fontFamily="@font/fontone"
+        android:gravity="center"
+        android:text="Хотите сменить имя или обращение?"
+        android:textColor="@color/Green"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.388"
+        android:visibility="gone"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonyes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonbreath"
+        android:fontFamily="@font/fontone"
+        android:text="Да"
+        android:textColor="@color/Darkgreen"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.294"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53"
+        android:visibility="gone"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonbreath"
+        android:fontFamily="@font/fontone"
+        android:text="Нет"
+        android:textColor="@color/Darkgreen"
+        android:textSize="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.321"
+        app:layout_constraintStart_toEndOf="@+id/buttonyes"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.53"
+        android:visibility="gone"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonSecret"
@@ -71,7 +123,8 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="visible"/>
 
 
 

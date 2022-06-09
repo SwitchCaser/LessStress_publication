@@ -97,23 +97,10 @@ public class Tamagochi extends AppCompatActivity {
             dark.setVisibility(View.INVISIBLE);
             window.setBackgroundResource(R.drawable.w1_day);
         }
-        /*
-        CountDownTimer cTimer = null;
+
+
         new CountDownTimer(2000000, 2000) {
-        void startTimer() {
-            cTimer = new CountDownTimer(30000, 1000) {
-                public void onTick(long millisUntilFinished) {
-                }
-                public void onFinish() {
-                }
-            };
-            cTimer.start();
-        }
-        void cancelTimer() {
-            if(cTimer!=null)
-                cTimer.cancel();
-        }
-        */
+
             public void onTick(long millisUntilFinished) {
 
                 time[1]=checkProgress(time[1]);
