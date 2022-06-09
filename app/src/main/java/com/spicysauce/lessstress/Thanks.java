@@ -26,7 +26,7 @@ public class Thanks extends AppCompatActivity {
             tip.setText("1. Чтобы включить фильтр по меткам, зажмите нужную метку\n2. Чтобы добавить заметку, удерживайте ячейку даты");
         }
         if (activity==2){
-            tip.setText("1. Долгое нажатие на солнышки поможет вам покормить Рюрика 2. Нажмите на него, чтобы погладить 3. Нажмите на выключатеь, чтобы уложить его спать");
+            tip.setText("1. Долгое нажатие на солнышки поможет вам покормить Рюрика\n2. Нажмите на него, чтобы погладить\n3. Нажмите на выключатеь, чтобы уложить его спать");
         }
         AppCompatButton secret = findViewById(R.id.buttonSecret);
         secret.setOnClickListener(new View.OnClickListener() {

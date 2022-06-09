@@ -13,9 +13,11 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name="com.spicysauce.lessstress.Store"
+            android:theme="@style/AppTheme.NoActionBar"
             android:exported="false" />
         <activity
             android:name="com.spicysauce.lessstress.Thanks"
+            android:theme="@style/AppTheme.NoActionBar"
             android:exported="false"/>
         <activity
             android:name="com.spicysauce.lessstress.screens.main.MainActivity4"

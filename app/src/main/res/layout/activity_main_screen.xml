@@ -112,7 +112,7 @@
 
         <ImageButton
             android:id="@+id/next34_button"
-            android:layout_width="230dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             android:scaleType="fitCenter"
