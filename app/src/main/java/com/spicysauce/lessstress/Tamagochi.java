@@ -32,6 +32,9 @@ public class Tamagochi extends AppCompatActivity {
     private SharedPreferences preferences;
     CountDownTimer healthT, healthT2;
 
+    CountDownTimer HappynessTimer, FoodTimer;
+    Handler handler = new Handler();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,10 +74,12 @@ public class Tamagochi extends AppCompatActivity {
         ProgressBar progressEat = (ProgressBar)findViewById(R.id.vertical_progressbar2);
         TextView textHappy = (TextView)findViewById(R.id.happyness);
         ProgressBar progressHappy = (ProgressBar)findViewById(R.id.vertical_progressbar3);
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 saveEverything();
+                //Tamagochi.this.onPause();
                 Intent intent7 = new Intent(Tamagochi.this, MainScreen.class);
                 startActivity(intent7);
                 finish();
@@ -98,8 +103,9 @@ public class Tamagochi extends AppCompatActivity {
             window.setBackgroundResource(R.drawable.w1_day);
         }
 
+        // TIMERS ZONE ------------------------------------------------------------------------------------------------------------------------------------------------>
 
-        new CountDownTimer(2000000, 2000) {
+        FoodTimer = new CountDownTimer(2000000, 2000) { // this is a happyness timer (clearly)
 
             public void onTick(long millisUntilFinished) {
 
@@ -108,8 +114,8 @@ public class Tamagochi extends AppCompatActivity {
                 progressHappy.setProgress(checkProgress(time[1]));
 
                 time[1]--;
-                Handler handler6 = new Handler();
-                handler6.postDelayed(new Runnable() {
+                //Handler handler6 = new Handler();
+                handler.postDelayed(new Runnable() {
                     public void run() {
                         checkMood(time);
                     }
@@ -124,8 +130,9 @@ public class Tamagochi extends AppCompatActivity {
 
             }
 
-        }.start();
-        new CountDownTimer(2000000, 2500) {
+        };
+
+        HappynessTimer = new CountDownTimer(2000000, 2500) { // this is a fucking eat
 
             public void onTick(long millisUntilFinished) {
                 time[0]=checkProgress(time[0]);
@@ -134,8 +141,8 @@ public class Tamagochi extends AppCompatActivity {
 
 
                 time[0]--;
-                Handler handler6 = new Handler();
-                handler6.postDelayed(new Runnable() {
+                //Handler handler6 = new Handler();
+                handler.postDelayed(new Runnable() {
                     public void run() {
                         checkMood(time);
                     }
@@ -150,8 +157,9 @@ public class Tamagochi extends AppCompatActivity {
 
             }
 
-        }.start();
-        healthT = new CountDownTimer(5000000, 5000) {
+        };
+
+        healthT = new CountDownTimer(5000000, 5000) { // this is kinda what?
 
             public void onTick(long millisUntilFinished) {
                 time[2]=checkProgress(time[2]);
@@ -159,8 +167,8 @@ public class Tamagochi extends AppCompatActivity {
                 progressHealth.setProgress(checkProgress(time[2]));
 
                 time[2]--;
-                Handler handler6 = new Handler();
-                handler6.postDelayed(new Runnable() {
+                //Handler handler6 = new Handler();
+                handler.postDelayed(new Runnable() {
                     public void run() {
                         checkMood(time);
                     }
@@ -176,7 +184,9 @@ public class Tamagochi extends AppCompatActivity {
 
             }
 
-        }.start();
+        };
+
+        // TIMERS ZONE END ################################################################################################################################################################################>
 
         dish = findViewById(R.id.yellow);
 
@@ -202,16 +212,16 @@ public class Tamagochi extends AppCompatActivity {
                 kar.setBackgroundResource(R.drawable.happy_newsize);
                 happyAnim = (AnimationDrawable) kar.getBackground();
                 happyAnim.start();
-                Handler handler3 = new Handler();
-                handler3.postDelayed(new Runnable() {
+                //Handler handler3 = new Handler();
+                handler.postDelayed(new Runnable() {
                     public void run() {
                         happyAnim.stop();
                         kar.setBackgroundResource(R.drawable.eat);
                         eatAnim = (AnimationDrawable) kar.getBackground();
                         kar.setOnDragListener(dragListener);
                         time[0]+=10;
-                        Handler handler5 = new Handler();
-                        handler5.postDelayed(new Runnable() {
+                        //Handler handler5 = new Handler();
+                        handler.postDelayed(new Runnable() {
                             public void run() {
                                 checkMood(time);
                             }
@@ -235,8 +245,8 @@ public class Tamagochi extends AppCompatActivity {
                     dark.setVisibility(View.VISIBLE);
                     sleep_button.setEnabled(false);
                     sleep_button.setBackgroundResource(R.drawable.sleep_on);
-                    Handler handler2 = new Handler();
-                    handler2.postDelayed(new Runnable() {
+                    //Handler handler2 = new Handler();
+                    handler.postDelayed(new Runnable() {
                         public void run() {
                             sleepAnim.stop();
                             karIm.setBackgroundResource(R.drawable.sleep_static);
@@ -245,7 +255,7 @@ public class Tamagochi extends AppCompatActivity {
                             healthT.cancel();
                             sleep_button.setEnabled(true);
 
-                            healthT2 = new CountDownTimer(500000, 2000) {
+                            healthT2 = new CountDownTimer(500000, 2000) { // i don't give a fuck what is it actually
 
                                 public void onTick(long millisUntilFinished) {
                                     time[2] = checkProgress(time[2]);
@@ -253,8 +263,8 @@ public class Tamagochi extends AppCompatActivity {
                                     progressHealth.setProgress(checkProgress(time[2]));
 
                                     time[2]++;
-                                    Handler handler4 = new Handler();
-                                    handler4.postDelayed(new Runnable() {
+                                    //Handler handler4 = new Handler();
+                                    handler.postDelayed(new Runnable() {
                                         public void run() {
                                             checkMood(time);
                                         }
@@ -268,13 +278,13 @@ public class Tamagochi extends AppCompatActivity {
                                 }
 
                                 public void onFinish() {
-
+                                    //healthT2.cancel();
                                 }
 
                             }.start();
                         }
                     }, 4500);
-                    isTappedSleep =true;
+                    isTappedSleep = true;
 
                 }
                 else {
@@ -326,8 +336,8 @@ public class Tamagochi extends AppCompatActivity {
                         time[1]+=20;
                         checkProgress(time[1]);
 
-                        Handler handler1 = new Handler();
-                        handler1.postDelayed(new Runnable() {
+                        //Handler handler1 = new Handler();
+                        handler.postDelayed(new Runnable() {
                             public void run() {
                                 eatAnim.stop();
                             }
@@ -346,8 +356,8 @@ public class Tamagochi extends AppCompatActivity {
     public void checkMood(int[] time){
         int total = IntStream.of(time).sum();
                 if (total<200) {
-                    Handler handler1 = new Handler();
-                    handler1.postDelayed(new Runnable() {
+                    //Handler handler1 = new Handler();
+                    handler.postDelayed(new Runnable() {
                         public void run() {
                             kar.setBackgroundResource(R.drawable.sad11);
 
@@ -392,6 +402,48 @@ public class Tamagochi extends AppCompatActivity {
         time[1] = preferences.getInt("time1",100);
         time[2] = preferences.getInt("time2",100);
     }
+
+    @Override
+    protected void onStart(){
+        super.onStart();
+
+        HappynessTimer.start();
+        FoodTimer.start();
+        healthT.start();
+
+    }
+
+    /*@Override
+    protected void onStop() {
+        super.onStop();
+
+        healthT.cancel();
+        HappynessTimer.cancel();
+        FoodTimer.cancel();
+
+    }*/
+
+    @Override
+    protected void onPause() // necesserily required - as Tamagochi consumes more and more RAM, this feature decreases consuming level, if MainScreen has been activated
+    {
+
+        super.onPause();
+
+        healthT.cancel();
+        HappynessTimer.cancel();
+        FoodTimer.cancel();
+
+    }
+
+    /*@Override
+    protected void onDestroy(){
+        healthT.cancel();
+        HappynessTimer.cancel();
+        FoodTimer.cancel();
+
+        super.onDestroy();
+
+    }*/
 
 
 }

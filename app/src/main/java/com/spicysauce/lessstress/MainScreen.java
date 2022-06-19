@@ -54,6 +54,8 @@ public class MainScreen extends AppCompatActivity {
                 }
             }
         });
+        // Critical error occurs on the "Back" click in the calendar - the cause found
+        // File Calendar.java - attempt to invoke virtual(?) method on a null object reference
         lamp1 = findViewById(R.id.lamp_main);
         lamp1.setOnClickListener(new View.OnClickListener() {
             @Override
