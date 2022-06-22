@@ -56,6 +56,7 @@ public class Tamagochi extends AppCompatActivity {
             }
         });
         */
+        //issues found
         lamp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
