@@ -138,6 +138,8 @@ public class Tamagochi extends AppCompatActivity {
                 time[0]=checkProgress(time[0]);
                 textEat.setText(checkDigit(time[0]));
                 progressEat.setProgress(checkProgress(time[0]));
+                //хуй
+                //TODO: хуй
 
 
                 time[0]--;
