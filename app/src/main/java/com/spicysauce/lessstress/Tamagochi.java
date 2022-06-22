@@ -426,7 +426,7 @@ public class Tamagochi extends AppCompatActivity {
                     public void run() {
                         happyAnim.stop();
                         kar.setBackgroundResource(R.drawable.eat);
-                        eatAnim = (AnimationDrawable) kar.getBackground();
+                        //eatAnim = (AnimationDrawable) kar.getBackground();
                         kar.setOnDragListener(dragListener);
                         time[0]+=10;
                         //Handler handler5 = new Handler();
@@ -510,23 +510,25 @@ public class Tamagochi extends AppCompatActivity {
                 kar.setBackgroundResource(R.drawable.eat);
                 eatAnim = (AnimationDrawable) kar.getBackground();
                 eatAnim.start();
+
                 //Handler handler1 = new Handler();
                 handler.postDelayed(new Runnable() {
                     public void run() {
                         eatAnim.stop();
+                        time[1]+=20;
+                        checkProgress(time[1]);
                     }
                 }, 4000);
                 break;
         }
         handler.postDelayed(new Runnable() {
             public void run() {
-                time[1]+=20;
-                checkProgress(time[1]);
+
                 FoodTimer.start();
                 HappynessTimer.start();
                 healthT.start();
             }
-        }, 3000);
+        }, 4500);
 
     }
 
