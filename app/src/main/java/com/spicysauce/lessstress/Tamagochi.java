@@ -28,9 +28,15 @@ public class Tamagochi extends AppCompatActivity {
     ImageButton store111;
     AnimationDrawable eatAnim, sleepAnim,sleepStaticAnim, happyAnim;
     static int[] time = {100,100,100};
+    static int numAnim;
     boolean isTappedSleep = false;
     private SharedPreferences preferences;
     CountDownTimer healthT, healthT2;
+    TextView textHealth;
+    ProgressBar progressHealth;
+
+    Handler handler = new Handler();
+    CountDownTimer FoodTimer, HappynessTimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,8 +71,8 @@ public class Tamagochi extends AppCompatActivity {
         preferences = getSharedPreferences("com.example.myapplication", Context.MODE_PRIVATE);
         updateEverything();
         home = findViewById(R.id.tools_icon);
-        TextView textHealth = (TextView)findViewById(R.id.health);
-        ProgressBar progressHealth = (ProgressBar)findViewById(R.id.vertical_progressbar1);
+        textHealth = (TextView)findViewById(R.id.health);
+        progressHealth = (ProgressBar)findViewById(R.id.vertical_progressbar1);
         TextView textEat = (TextView)findViewById(R.id.eat);
         ProgressBar progressEat = (ProgressBar)findViewById(R.id.vertical_progressbar2);
         TextView textHappy = (TextView)findViewById(R.id.happyness);
@@ -99,7 +105,7 @@ public class Tamagochi extends AppCompatActivity {
         }
 
 
-        new CountDownTimer(2000000, 2000) {
+        FoodTimer = new CountDownTimer(2000000, 2000) {
 
             public void onTick(long millisUntilFinished) {
 
@@ -108,8 +114,8 @@ public class Tamagochi extends AppCompatActivity {
                 progressHappy.setProgress(checkProgress(time[1]));
 
                 time[1]--;
-                Handler handler6 = new Handler();
-                handler6.postDelayed(new Runnable() {
+                //Handler handler6 = new Handler();
+                handler.postDelayed(new Runnable() {
                     public void run() {
                         checkMood(time);
                     }
@@ -124,20 +130,20 @@ public class Tamagochi extends AppCompatActivity {
 
             }
 
-        }.start();
-        new CountDownTimer(2000000, 2500) {
+        };
+
+        HappynessTimer = new CountDownTimer(2000000, 2500) {
 
             public void onTick(long millisUntilFinished) {
                 time[0]=checkProgress(time[0]);
                 textEat.setText(checkDigit(time[0]));
                 progressEat.setProgress(checkProgress(time[0]));
-                //хуй
-                //TODO: хуй
+
 
 
                 time[0]--;
-                Handler handler6 = new Handler();
-                handler6.postDelayed(new Runnable() {
+                //Handler handler6 = new Handler();
+                handler.postDelayed(new Runnable() {
                     public void run() {
                         checkMood(time);
                     }
@@ -152,7 +158,7 @@ public class Tamagochi extends AppCompatActivity {
 
             }
 
-        }.start();
+        };
         healthT = new CountDownTimer(5000000, 5000) {
 
             public void onTick(long millisUntilFinished) {
@@ -161,8 +167,8 @@ public class Tamagochi extends AppCompatActivity {
                 progressHealth.setProgress(checkProgress(time[2]));
 
                 time[2]--;
-                Handler handler6 = new Handler();
-                handler6.postDelayed(new Runnable() {
+                //Handler handler6 = new Handler();
+                handler.postDelayed(new Runnable() {
                     public void run() {
                         checkMood(time);
                     }
@@ -178,7 +184,7 @@ public class Tamagochi extends AppCompatActivity {
 
             }
 
-        }.start();
+        };
 
         dish = findViewById(R.id.yellow);
 
@@ -201,19 +207,22 @@ public class Tamagochi extends AppCompatActivity {
         kar.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
+                numAnim =1;
+                playAnimation(numAnim);
+                /*
                 kar.setBackgroundResource(R.drawable.happy_newsize);
                 happyAnim = (AnimationDrawable) kar.getBackground();
                 happyAnim.start();
-                Handler handler3 = new Handler();
-                handler3.postDelayed(new Runnable() {
+                //Handler handler3 = new Handler();
+                handler.postDelayed(new Runnable() {
                     public void run() {
                         happyAnim.stop();
                         kar.setBackgroundResource(R.drawable.eat);
                         eatAnim = (AnimationDrawable) kar.getBackground();
                         kar.setOnDragListener(dragListener);
                         time[0]+=10;
-                        Handler handler5 = new Handler();
-                        handler5.postDelayed(new Runnable() {
+                        //Handler handler5 = new Handler();
+                        handler.postDelayed(new Runnable() {
                             public void run() {
                                 checkMood(time);
                             }
@@ -221,14 +230,19 @@ public class Tamagochi extends AppCompatActivity {
 
                     }
                 }, 3000);
+
+
+                 */
                 return false;
             }
         });
         sleep_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (isTappedSleep == false) {
+                numAnim=2;
+                playAnimation(numAnim);
+                /*
+                if (!isTappedSleep) {
                     karIm.setVisibility(View.VISIBLE);
                     kar.setVisibility(View.GONE);
                     bed.setVisibility(View.GONE);
@@ -255,8 +269,8 @@ public class Tamagochi extends AppCompatActivity {
                                     progressHealth.setProgress(checkProgress(time[2]));
 
                                     time[2]++;
-                                    Handler handler4 = new Handler();
-                                    handler4.postDelayed(new Runnable() {
+                                    //Handler handler4 = new Handler();
+                                    handler.postDelayed(new Runnable() {
                                         public void run() {
                                             checkMood(time);
                                         }
@@ -294,7 +308,7 @@ public class Tamagochi extends AppCompatActivity {
 
                 }
 
-
+                 */
             }
 
         });
@@ -322,18 +336,23 @@ public class Tamagochi extends AppCompatActivity {
                 case DragEvent.ACTION_DRAG_ENTERED:
                     final View view = (View) event.getLocalState();
                     if (view.getId()== R.id.yellow) {
+                        numAnim=3;
+                        playAnimation(numAnim);
+                        //break;
+                        /*
                         kar.setBackgroundResource(R.drawable.eat);
                         eatAnim = (AnimationDrawable) kar.getBackground();
                         eatAnim.start();
                         time[1]+=20;
                         checkProgress(time[1]);
 
-                        Handler handler1 = new Handler();
-                        handler1.postDelayed(new Runnable() {
+                        //Handler handler1 = new Handler();
+                        handler.postDelayed(new Runnable() {
                             public void run() {
                                 eatAnim.stop();
                             }
                         }, 3000);
+                        */
                     }
                     break;
                 case DragEvent.ACTION_DRAG_EXITED:
@@ -348,8 +367,8 @@ public class Tamagochi extends AppCompatActivity {
     public void checkMood(int[] time){
         int total = IntStream.of(time).sum();
                 if (total<200) {
-                    Handler handler1 = new Handler();
-                    handler1.postDelayed(new Runnable() {
+                    //Handler handler1 = new Handler();
+                    handler.postDelayed(new Runnable() {
                         public void run() {
                             kar.setBackgroundResource(R.drawable.sad11);
 
@@ -393,6 +412,145 @@ public class Tamagochi extends AppCompatActivity {
         time[0] = preferences.getInt("time0",100);
         time[1] = preferences.getInt("time1",100);
         time[2] = preferences.getInt("time2",100);
+    }
+    private void playAnimation(int numAnim){
+        FoodTimer.cancel();
+        HappynessTimer.cancel();
+        healthT.cancel();
+        switch (numAnim) {
+            case(1):
+                kar.setBackgroundResource(R.drawable.happy_newsize);
+                happyAnim = (AnimationDrawable) kar.getBackground();
+                happyAnim.start();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        happyAnim.stop();
+                        kar.setBackgroundResource(R.drawable.eat);
+                        eatAnim = (AnimationDrawable) kar.getBackground();
+                        kar.setOnDragListener(dragListener);
+                        time[0]+=10;
+                        //Handler handler5 = new Handler();
+                        handler.postDelayed(new Runnable() {
+                            public void run() {
+                                checkMood(time);
+                            }
+                        }, 3000);
+
+                    }
+                }, 4000);
+                break;
+            case(2):
+                if (!isTappedSleep) {
+                    karIm.setVisibility(View.VISIBLE);
+                    kar.setVisibility(View.GONE);
+                    bed.setVisibility(View.GONE);
+                    karIm.setBackgroundResource(R.drawable.sleep);
+                    sleepAnim.start();
+                    dark.setVisibility(View.VISIBLE);
+                    sleep_button.setEnabled(false);
+                    sleep_button.setBackgroundResource(R.drawable.sleep_on);
+                    Handler handler2 = new Handler();
+                    handler2.postDelayed(new Runnable() {
+                        public void run() {
+                            sleepAnim.stop();
+                            karIm.setBackgroundResource(R.drawable.sleep_static);
+                            sleepStaticAnim = (AnimationDrawable) karIm.getBackground();
+                            sleepStaticAnim.start();
+                            healthT.cancel();
+                            sleep_button.setEnabled(true);
+
+                            healthT2 = new CountDownTimer(500000, 2000) {
+
+                                public void onTick(long millisUntilFinished) {
+                                    time[2] = checkProgress(time[2]);
+                                    textHealth.setText(checkDigit(time[2]));
+                                    progressHealth.setProgress(checkProgress(time[2]));
+
+                                    time[2]++;
+                                    //Handler handler4 = new Handler();
+                                    handler.postDelayed(new Runnable() {
+                                        public void run() {
+                                            checkMood(time);
+                                        }
+                                    }, 3000);
+
+
+                                }
+
+                                private String checkDigit(int time) {
+                                    return String.valueOf(time);
+                                }
+
+                                public void onFinish() {
+
+                                }
+
+                            }.start();
+                        }
+                    }, 4500);
+                    isTappedSleep =true;
+
+                }
+                else {
+
+                    dark.setVisibility(View.GONE);
+                    sleep_button.setBackgroundResource(R.drawable.sleep_off);
+                    sleepStaticAnim.stop();
+                    karIm.setVisibility(View.GONE);
+                    kar.setVisibility(View.VISIBLE);
+                    bed.setVisibility(View.VISIBLE);
+                    healthT2.cancel();
+                    healthT.start();
+                    isTappedSleep = false;
+
+
+                }
+                break;
+            case(3):
+                kar.setBackgroundResource(R.drawable.eat);
+                eatAnim = (AnimationDrawable) kar.getBackground();
+                eatAnim.start();
+                //Handler handler1 = new Handler();
+                handler.postDelayed(new Runnable() {
+                    public void run() {
+                        eatAnim.stop();
+                    }
+                }, 4000);
+                break;
+        }
+        handler.postDelayed(new Runnable() {
+            public void run() {
+                time[1]+=20;
+                checkProgress(time[1]);
+                FoodTimer.start();
+                HappynessTimer.start();
+                healthT.start();
+            }
+        }, 3000);
+
+    }
+
+
+    @Override
+    protected void onStart()
+    {
+        FoodTimer.start();
+        HappynessTimer.start();
+        healthT.start();
+
+        super.onStart();
+    }
+
+    @Override
+    protected void onPause()
+    {
+
+        FoodTimer.cancel();
+        HappynessTimer.cancel();
+        healthT.cancel();
+
+        super.onPause();
+
     }
 
 
